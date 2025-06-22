@@ -4,7 +4,7 @@ from conections.mongo import conection_mongo
 def delete_publication(publication_id):
     try:
         db = conection_mongo()
-        publications_collection = db["UserPublication"]
+        publications_collection = db["Publications"]
 
         try:
             obj_id = ObjectId(publication_id)
@@ -13,7 +13,7 @@ def delete_publication(publication_id):
 
         result = publications_collection.update_one(
             {"_id": obj_id},
-            {"$set": {"status": 0}}
+            {"$set": {"Status": 0}}
         )
 
         if result.matched_count == 0:
