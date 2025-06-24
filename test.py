@@ -1,11 +1,11 @@
 import requests
 
-LOGIN_URL = "http://localhost:8080/login"
-DELETE_URL = "http://localhost:8081/delete-publication"
+LOGIN_URL = "http://52.203.72.116:8080/login"
+DELETE_URL = "http://44.219.87.84:8080/delete-publication"
 
 
 login_data = {
-    "User_mail": "ascorread", 
+    "User_mail": "allan", 
     "password": "1234"
 }
 login_response = requests.post(LOGIN_URL, json=login_data)
@@ -21,7 +21,7 @@ headers = {
     "Authorization": f"Bearer {token}"
 }
 
-publication_id = "68587f8b5dfa12355fab95b4"  
+publication_id = "685b022781b47716395bbd2c"  
 
 payload = {
     "publication_id": publication_id
