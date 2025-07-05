@@ -21,7 +21,7 @@ headers = {
     "Authorization": f"Bearer {token}"
 }
 
-publication_id = "685b022781b47716395bbd2c"  
+publication_id = "686878a7de34f79af1d73029"  
 
 payload = {
     "publication_id": publication_id
